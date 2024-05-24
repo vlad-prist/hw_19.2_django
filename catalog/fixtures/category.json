@@ -1,0 +1,26 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 8,
+  "fields": {
+    "name": "phones",
+    "description": "mobile phones"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 9,
+  "fields": {
+    "name": "TV",
+    "description": "modern television"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 10,
+  "fields": {
+    "name": "headphones",
+    "description": "wireless"
+  }
+}
+]

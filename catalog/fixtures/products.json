@@ -1,0 +1,54 @@
+[
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "name": "Samsung A30",
+    "description": "iphone killer, perhaps, USD",
+    "image": "",
+    "category": 8,
+    "price": "1000.00",
+    "created_at": "2024-05-24T14:09:06.040Z",
+    "updated_at": "2024-05-24T14:09:06.040Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "name": "iPhone 16 Pro Max",
+    "description": "Samsung killer, USD",
+    "image": "",
+    "category": 8,
+    "price": "1500.00",
+    "created_at": "2024-05-24T14:09:36.510Z",
+    "updated_at": "2024-05-24T14:09:36.510Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "name": "Sumsung FullHDTV",
+    "description": "TV 2024, USD",
+    "image": "",
+    "category": 9,
+    "price": "1000.00",
+    "created_at": "2024-05-24T14:10:15.098Z",
+    "updated_at": "2024-05-24T14:10:15.098Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "name": "LG DigitalRevolution",
+    "description": "TV, 2023, USD",
+    "image": "",
+    "category": 9,
+    "price": "800.00",
+    "created_at": "2024-05-24T14:10:43.514Z",
+    "updated_at": "2024-05-24T14:10:43.514Z"
+  }
+}
+]
