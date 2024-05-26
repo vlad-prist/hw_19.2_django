@@ -65,6 +65,12 @@ class Command(BaseCommand):
                         )
             )
 
-        print(products_for_create)
+        #Product.objects.all().order_by('-created_at')
 
         Product.objects.bulk_create(products_for_create)
+
+        # Дополнительное задание 1
+        print(Product.objects.all().order_by('-created_at')[:2])
+
+
+
