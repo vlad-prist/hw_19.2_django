@@ -1,7 +1,7 @@
 # Домашняя работа 20.1
 
 # Задание 1.
-В файле config/setting.py прописаны настройки для подключения к БД в PostgresQL
+В файле config/setting.py прописаны настройки для подключения к БД в PostgresQL.
 В PostgresQL создана БД "prod_cat"
 
 # Задание 2.
@@ -10,6 +10,8 @@
 # Задание 3.
 Для каждой модели описаны поля.
 А также проведена настройка в файле config/setting.py для MEDIA-файлов.
+в config/urls.py добавлено:
+"+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)"
 
 # Задание 4.
 Созданы миграции для действующих моделей.
