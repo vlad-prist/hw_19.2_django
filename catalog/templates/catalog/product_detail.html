@@ -1,0 +1,20 @@
+{% extends 'catalog/category_main_page.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <div class="card">
+                <img src="{{ product.image | media_filter }}">
+                <div class="card-body">
+                    <h4 class="card-title">{{ product.name }}</h4>
+                    <p class="card-text">
+                        {{ product.description }}
+                    </p>
+                    <a class="btn btn-primary" href="{% url 'catalog:products' %}" role="button">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

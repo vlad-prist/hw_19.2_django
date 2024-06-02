@@ -30,6 +30,7 @@
 2. для фикстуры dumpdata применены кодировки:
 
 python -Xutf8 manage.py dumpdata catalog.Category --indent=2 --exclude auth.permission --exclude contenttypes -o category.json
+
 python -Xutf8 manage.py dumpdata catalog.Product --indent=2 --exclude auth.permission --exclude contenttypes -o products.json
 
 Созданные json-файлы с фикстурами помещены в папку catalog/fixtures
