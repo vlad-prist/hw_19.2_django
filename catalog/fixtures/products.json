@@ -1,0 +1,171 @@
+[
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "name": "Ноутбук  Timio 15.6\"",
+    "description": "Ноутбук 15.6\" IPS 4-Ядра RAM 16GB SSD 512GB (M.2)",
+    "image": "products/images/1.JPG",
+    "category": 3,
+    "price": "25137.00",
+    "created_at": "2024-05-31T15:39:31.854Z",
+    "updated_at": "2024-05-31T15:39:31.854Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "name": "Honor  MagicBook X16",
+    "description": "Ноутбук MagicBook X16 2024 i5 12450H 8GB+512GB DOS 5301AHHP",
+    "image": "products/images/2.JPG",
+    "category": 3,
+    "price": "43387.00",
+    "created_at": "2024-05-31T15:40:23.174Z",
+    "updated_at": "2024-05-31T15:40:23.174Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "name": "Моноблок Smartx",
+    "description": "Моноблок Intel i5-3320M /8Gb/512Gb SSD",
+    "image": "products/images/3.JPG",
+    "category": 3,
+    "price": "23038.00",
+    "created_at": "2024-05-31T15:41:16.601Z",
+    "updated_at": "2024-05-31T15:41:16.601Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "name": "FREEMAN Воздуходувка",
+    "description": "Воздуходувка для компьютера аккумуляторная",
+    "image": "products/images/4.JPG",
+    "category": 3,
+    "price": "2211.00",
+    "created_at": "2024-05-31T15:42:03.702Z",
+    "updated_at": "2024-05-31T15:42:03.702Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "name": "TECHNO Camon",
+    "description": "Camon 20 8+256GB",
+    "image": "products/images/5.JPG",
+    "category": 4,
+    "price": "12658.00",
+    "created_at": "2024-05-31T15:43:57.285Z",
+    "updated_at": "2024-05-31T15:43:57.285Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "name": "Honor 90",
+    "description": "Смартфон 90 8GB+256GB черный",
+    "image": "products/images/6.JPG",
+    "category": 4,
+    "price": "29080.00",
+    "created_at": "2024-05-31T15:44:45.032Z",
+    "updated_at": "2024-05-31T15:44:45.032Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "name": "Honor 90 lite",
+    "description": "Смартфон 90 lite 8GB+256GB синий",
+    "image": "products/images/7.JPG",
+    "category": 4,
+    "price": "15268.00",
+    "created_at": "2024-05-31T15:45:26.043Z",
+    "updated_at": "2024-05-31T15:45:26.043Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "name": "Чехол для Nintendo",
+    "description": "Чехол для Nintendo Switch (нинтендо свитч), прочный, черный",
+    "image": "products/images/8.JPG",
+    "category": 1,
+    "price": "469.00",
+    "created_at": "2024-05-31T15:46:31.774Z",
+    "updated_at": "2024-05-31T15:46:31.774Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "name": "Настенный кронштейн",
+    "description": "Настенный кронштейн для игровой приставки Sony PlayStation 5",
+    "image": "products/images/9.JPG",
+    "category": 1,
+    "price": "1124.00",
+    "created_at": "2024-05-31T15:47:07.956Z",
+    "updated_at": "2024-05-31T15:47:07.956Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "name": "Камера для PlayStation 5",
+    "description": "Камера HD camera для PlayStation 5",
+    "image": "products/images/10.JPG",
+    "category": 1,
+    "price": "1501.00",
+    "created_at": "2024-05-31T15:48:16.633Z",
+    "updated_at": "2024-05-31T15:48:16.633Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "name": "Наушники Apple Airpods Pro 3",
+    "description": "Наушники Apple Airpods Pro 3",
+    "image": "products/images/11.JPG",
+    "category": 2,
+    "price": "20000.00",
+    "created_at": "2024-05-31T15:49:52.442Z",
+    "updated_at": "2024-05-31T15:49:52.442Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "name": "Наушники EarPods",
+    "description": "Наушники EarPods проводные with Lightning",
+    "image": "products/images/12.JPG",
+    "category": 2,
+    "price": "1500.00",
+    "created_at": "2024-05-31T15:50:30.876Z",
+    "updated_at": "2024-05-31T15:50:30.876Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "name": "Наушники Airpods Max 2022",
+    "description": "Беспроводные наушники Airpods Max Белый 2022",
+    "image": "products/images/13.JPG",
+    "category": 2,
+    "price": "63147.00",
+    "created_at": "2024-05-31T15:51:25.229Z",
+    "updated_at": "2024-05-31T15:51:25.229Z"
+  }
+}
+]
