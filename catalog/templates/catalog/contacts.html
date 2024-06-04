@@ -1,6 +1,13 @@
 {% extends 'catalog/base.html' %}
 {% block content %}
-
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="font-weight-bold">{{ title }}</h1>
+            <p class="lead text-body-secondary"></p>
+        </div>
+    </div>
+</section>
 <div class="container">
     <div class="row text-start">
         <div class="col-lg-6 col-md-4 col-sm-6">
@@ -33,15 +40,18 @@
                         {% csrf_token %}
                         <div class="mb-3">
                             <label for="name">Имя</label>
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" required>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя"
+                                   required>
                         </div>
                         <div class="mb-3">
                             <label for="phone">Телефон</label>
-                            <input type="text" name="phone" class="form-control" id="phone" placeholder="Контактный телефон" required>
+                            <input type="text" name="phone" class="form-control" id="phone"
+                                   placeholder="Контактный телефон" required>
                         </div>
                         <div class="mb-3">
                             <label for="message">Сообщение</label>
-                            <textarea type="text" name="message" class="form-control" id="message" placeholder="Введите сообщение" required></textarea>
+                            <textarea type="text" name="message" class="form-control" id="message"
+                                      placeholder="Введите сообщение" required></textarea>
                         </div>
                         <button type="button" class="btn btn-outline-primary mb-2">Отправить</button>
                     </form>

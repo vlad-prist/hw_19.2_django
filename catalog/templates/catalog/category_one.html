@@ -1,21 +1,31 @@
 {% extends 'catalog/base.html' %}
-
+{% load my_tags %}
 {% block content %}
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-            <div class="col-4">
-                <div class="card mb-4 box-shadow">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">{{ category_one.name }}</h4>
-                        <p class="card-text">
-                            {{ category_one.description }}
-                        </p>
-                        <a href="{% url 'catalog:products' %}" class="btn btn-link">Перейти</a>
-                    </div>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="font-weight-bold">{{ title }}</h1>
+            <p class="lead text-body-secondary">{{ category_one.description }}</p>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for category in category_one.products.all %}
+        <div class="col-4">
+            <div class="card mb-4 box-shadow">
+                <img src="{{ category.image | media_filter }}">
+                <div class="card-body">
+                    <h4 class="card-title">{{ category.name }}</h4>
+                    <p class="card-text">
+                        {{ category.description }}
+                    <h6 class="text">Цена: {{ category.price }} рублей.</h6>
+                    </p>
+                    <a class="btn btn-primary" href="{% url 'catalog:products' %}" role="button">Подробнее</a>
                 </div>
             </div>
-
         </div>
-
-{% endblock %}
+        {% endfor %}
+    </div>
+    <a style="text-align:center" href="{% url 'catalog:category_main_page' %}" role="button">Назад в категории</a>
+    {% endblock %}
