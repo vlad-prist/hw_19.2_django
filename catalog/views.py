@@ -12,7 +12,7 @@ def contacts(request):
     return render(request, 'catalog/contacts.html', context)
 
 
-def category_main_page(request, ):
+def category_main_page(request):
     category = Category.objects.all()
     context = {
         'category_list': category,
@@ -34,9 +34,9 @@ def category_one(request, pk):
 
 
 def products(request):
-    product = Product.objects.all()
+    products = Product.objects.all()
     context = {
-        'product_list': product,
+        'products_list': products,
         'title': 'Товары',
     }
     return render(request, 'catalog/products.html', context)
