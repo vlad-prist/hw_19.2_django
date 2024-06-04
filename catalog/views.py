@@ -33,21 +33,24 @@ def category_one(request, pk):
     return render(request, 'catalog/category_one.html', context)
 
 
-def products(request):
-    products = Product.objects.all()
+def products(request, pk):
+    product = get_object_or_404(Product, pk=pk)
     context = {
-        'products_list': products,
-        'title': 'Товары',
+        'products_list': product,
+        'title': f'{product.name}',
+        'description': f'{product.description}',
+        'image': f'{product.image}',
+        'price': f'{product.price}',
     }
     return render(request, 'catalog/products.html', context)
 
 
-def product_detail(request, pk):
-    product_one = get_object_or_404(Product, pk=pk)
-
-    context = {
-        'product_one': product_one,
-        'title': f'{product_one.name}',
-
-    }
-    return render(request, 'catalog/product_detail.html', context)
+# def product_detail(request, pk):
+#     product_one = get_object_or_404(Product, pk=pk)
+#
+#     context = {
+#         'product_one': product_one,
+#         'title': f'{product_one.name}',
+#
+#     }
+#     return render(request, 'catalog/products.html', context)

@@ -11,7 +11,7 @@
 </section>
 <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for category in category_one.products.all %}
+        {% for category in prod_cat %}
         <div class="col-4">
             <div class="card mb-4 box-shadow">
                 <img src="{{ category.image | media_filter }}">
@@ -21,7 +21,7 @@
                         {{ category.description }}
                     <h6 class="text">Цена: {{ category.price }} рублей.</h6>
                     </p>
-                    <a class="btn btn-primary" href="{% url 'catalog:products' %}" role="button">Подробнее</a>
+                    <a class="btn btn-primary" href="{% url 'catalog:products' category.pk %}" role="button">Подробнее</a>
                 </div>
             </div>
         </div>

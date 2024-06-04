@@ -12,14 +12,13 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
             <div class="card">
-                <img src="{{ product_one.image | media_filter }}">
+                <img src="{{ image | media_filter }}">
                 <div class="card-body">
-                    <h4 class="card-title">{{ product_one.name }}</h4>
+                    <h4 class="card-title">{{ title }}</h4>
                     <p class="card-text">
-                        {{ product_one.description }}
-                    <h6 class="text">Цена: {{ product_one.price }} рублей.</h6>
+                        {{ description }}
+                    <h6 class="text">Цена: {{ price }} рублей.</h6>
                     </p>
-
                 </div>
             </div>
         </div>
