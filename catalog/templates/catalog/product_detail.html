@@ -4,25 +4,28 @@
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="font-weight-bold">{{ title }}</h1>
+            <h1 class="font-weight-bold">{{ object.name }}</h1>
         </div>
     </div>
 </section>
 <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col-4">
+        <div class="col">
             <div class="card">
-                <img src="{{ product_one.image | media_filter }}">
+                <img src="{{ object.image | media_filter }}">
                 <div class="card-body">
-                    <h4 class="card-title">{{ product_one.name }}</h4>
+                    <h4 class="card-title">{{ object.name }}</h4>
                     <p class="card-text">
-                        {{ product_one.description }}
+                        {{ object.description }}
+                    <h6 class="text">Цена: {{ object.price }} рублей.</h6>
                     </p>
-                    <h6 class="text">Цена: {{ product_one.price }} рублей.</h6>
-                    <a class="btn btn-primary" href="{% url 'catalog:products' %}" role="button">Назад</a>
                 </div>
             </div>
         </div>
     </div>
+<a style="text-align:center" href="{% url 'catalog:category_main_page' %}" role="button">Назад в категории</a>
 </div>
+
+
+
 {% endblock %}

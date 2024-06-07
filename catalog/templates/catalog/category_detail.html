@@ -4,14 +4,14 @@
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="font-weight-bold">{{ title }}</h1>
-            <p class="lead text-body-secondary">{{ category_one.description }}</p>
+            <h1 class="font-weight-bold">{{ object.name }}</h1>
+            <p class="lead text-body-secondary">{{ object.description }}</p>
         </div>
     </div>
 </section>
 <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for category in prod_cat %}
+        {% for category in object.products.all %}
         <div class="col-4">
             <div class="card mb-4 box-shadow">
                 <img src="{{ category.image | media_filter }}">
