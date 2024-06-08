@@ -69,8 +69,7 @@ class Command(BaseCommand):
 
         Product.objects.bulk_create(products_for_create)
 
-        # Дополнительное задание 1
-        print(Product.objects.all().order_by('-created_at')[:2])
+
 
 
 
