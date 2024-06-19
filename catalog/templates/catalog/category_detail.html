@@ -9,7 +9,11 @@
         </div>
     </div>
 </section>
+
 <div class="container">
+    <div class="col-12 mb-5">
+    <a class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить товар</a>
+</div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for category in object.products.all %}
         <div class="col-4">
@@ -21,11 +25,13 @@
                         {{ category.description }}
                     <h6 class="text">Цена: {{ category.price }} рублей.</h6>
                     </p>
-                    <a class="btn btn-primary" href="{% url 'catalog:products' category.pk %}" role="button">Подробнее</a>
+                    <a class="btn btn-outline-primary" href="{% url 'catalog:products' category.pk %}" role="button">Подробнее</a>
+                    <a class="btn btn-outline-success" href="{% url 'catalog:update' category.pk %}" role="button">Редактировать</a>
+                    <a class="btn btn-outline-danger" href="{% url 'catalog:delete' category.pk %}" role="button">Удалить</a>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
-    <a style="text-align:center" href="{% url 'catalog:category_main_page' %}" role="button">Назад в категории</a>
+    <a style="text-align:center" href="{% url 'catalog:categories_list' %}" role="button">Назад в категории</a>
     {% endblock %}

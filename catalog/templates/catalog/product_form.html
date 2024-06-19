@@ -1,0 +1,54 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="font-weight-bold">
+                {% if object %}
+                Редактирование
+                {% else %}
+                Создание
+                {% endif %}
+            </h1>
+        </div>
+    </div>
+</section>
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <form class="row" method="post" enctype="multipart/form-data">
+            <div class="col-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-success">
+                            {% if object %}
+                            Сохранить
+                            {% else %}
+                            Создать
+                            {% endif %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">Версия {{ object.name }}</p>
+                        {{ formset.management_form }}
+                        {% for form in formset.forms %}
+                        {{ form.as_p }}
+                        {% endfor %}
+                    </div>
+                </div>
+        </form>
+    </div>
+    <div class="col">
+        <a class="btn btn-outline-secondary" href="{% url 'catalog:categories_list' %}" role="button">Назад</a>
+    </div>
+</div>
+
+
+
+{% endblock %}
