@@ -44,8 +44,7 @@ class ProductUpdateView(UpdateView):
     form_class = ProductForm
 
     def get_success_url(self):
-        return reverse('catalog:products', args=[self.kwargs.get('pk')]) # kwargs={'pk': self.object.pk}
-# Если указываю 'catalog:category_one' то попадаю не в ту категорию, поэтому указываю products
+        return reverse('catalog:category_one', args=[self.kwargs.get('pk')]) # kwargs={'pk': self.object.pk}
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)

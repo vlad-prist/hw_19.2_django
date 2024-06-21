@@ -23,7 +23,10 @@
             </div>
         </div>
     </div>
-<a style="text-align:center" href="{% url 'catalog:categories_list' %}" role="button">Назад в категории</a>
+    <div>
+        <a class="btn btn-outline-secondary"  href="{% url 'catalog:category_one' object.category.pk %}" role="button">Назад к
+            выбору продукта</a>
+    </div>
 </div>
 
 
