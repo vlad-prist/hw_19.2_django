@@ -20,6 +20,11 @@
                     <h6 class="text">Цена: {{ object.price }} рублей.</h6>
                     </p>
                 </div>
+                {% for version in object.version_product.all %}
+                <div class="card-footer">
+                    Версия: {{ version.number_version }} / {{ version.name_version }}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -28,7 +33,5 @@
             выбору продукта</a>
     </div>
 </div>
-
-
 
 {% endblock %}
