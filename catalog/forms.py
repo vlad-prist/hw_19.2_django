@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import BooleanField
+from django.forms import BooleanField, BaseInlineFormSet
 
 from catalog.models import Product, Version
 
@@ -44,3 +44,4 @@ class VersionForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = Version
         fields = '__all__'
+

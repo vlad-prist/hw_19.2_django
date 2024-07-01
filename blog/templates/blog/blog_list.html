@@ -11,7 +11,9 @@
 <div class="album py-3 bg-body-tertiary">
     <div class="container">
         <div class="col-12 mb-3">
+            {% if user.is_authenticated %}
             <a class="btn btn-outline-primary" href="{% url 'blog:create' %}">Добавить статью</a>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -34,10 +36,12 @@
                             <div class="btn-group">
                                 <a class="btn btn-outline-info" href="{% url 'blog:view' object.pk %}"
                                    role="button">Просмотр</a>
+                                {% if user.is_authenticated %}
                                 <a class="btn btn-outline-info" href="{% url 'blog:update' object.pk %}"
                                    role="button">Редактировать</a>
                                 <a class="btn btn-outline-info" href="{% url 'blog:delete' object.pk %}"
                                    role="button">Удалить</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

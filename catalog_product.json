@@ -1,0 +1,132 @@
+[
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "name": "Ноутбук  Timio 15.6\"",
+    "description": "Ноутбук 15.6\" IPS 4-Ядра RAM 16GB SSD 512GB (M.2)",
+    "image": "products/images/1.JPG",
+    "category": 3,
+    "price": "25137.00",
+    "created_at": "2024-05-31T15:39:31.854Z",
+    "updated_at": "2024-06-21T15:19:57.014Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "name": "Honor MagicBook X16",
+    "description": "Ноутбук MagicBook X16 2024 i5 12450H 8GB+512GB DOS 5301AHHP",
+    "image": "products/images/2.JPG",
+    "category": 3,
+    "price": "43387.00",
+    "created_at": "2024-05-31T15:40:23.174Z",
+    "updated_at": "2024-06-25T07:13:57.279Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "name": "Моноблок Smartx",
+    "description": "Моноблок Intel i5-3320M /8Gb/512Gb SSD",
+    "image": "products/images/3.JPG",
+    "category": 3,
+    "price": "23038.00",
+    "created_at": "2024-05-31T15:41:16.601Z",
+    "updated_at": "2024-06-25T07:09:43.451Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "name": "TECHNO Camon",
+    "description": "Camon 20 8+256GB",
+    "image": "products/images/5.JPG",
+    "category": 4,
+    "price": "12658.00",
+    "created_at": "2024-05-31T15:43:57.285Z",
+    "updated_at": "2024-06-21T15:48:38.454Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "name": "Honor 90",
+    "description": "Смартфон 90 8GB+256GB черный",
+    "image": "products/images/6.JPG",
+    "category": 4,
+    "price": "29080.00",
+    "created_at": "2024-05-31T15:44:45.032Z",
+    "updated_at": "2024-06-21T15:48:19.098Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "name": "Honor 90 lite",
+    "description": "Смартфон 90 lite 8GB+256GB синий",
+    "image": "products/images/7.JPG",
+    "category": 4,
+    "price": "15268.00",
+    "created_at": "2024-05-31T15:45:26.043Z",
+    "updated_at": "2024-06-21T15:48:52.515Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "name": "Наушники Apple Airpods Pro 3",
+    "description": "Наушники Apple Airpods Pro 3",
+    "image": "products/images/11.JPG",
+    "category": 2,
+    "price": "20000.00",
+    "created_at": "2024-05-31T15:49:52.442Z",
+    "updated_at": "2024-06-21T14:53:17.493Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "name": "Наушники EarPods",
+    "description": "Наушники EarPods проводные with Lightning",
+    "image": "products/images/12.JPG",
+    "category": 2,
+    "price": "1500.00",
+    "created_at": "2024-05-31T15:50:30.876Z",
+    "updated_at": "2024-06-19T22:28:56.224Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "name": "Наушники Airpods Max 2022",
+    "description": "Беспроводные наушники Airpods Max Белый 2022",
+    "image": "products/images/13.JPG",
+    "category": 2,
+    "price": "63147.00",
+    "created_at": "2024-05-31T15:51:25.229Z",
+    "updated_at": "2024-06-21T15:33:00.547Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 31,
+  "fields": {
+    "name": "iPhone 15 Pro",
+    "description": "6.1\" Смартфон Apple iPhone 15 Pro 256 ГБ серый",
+    "image": "products/images/1_1YOORGc.JPG",
+    "category": 4,
+    "price": "132699.00",
+    "created_at": "2024-06-21T15:59:15.348Z",
+    "updated_at": "2024-06-21T16:00:51.882Z"
+  }
+}
+]
