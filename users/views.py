@@ -46,7 +46,6 @@ def email_verification(request, token):
 class UserUpdateView(UpdateView):
     model = User
     form_class = UserProfileForm
-    # success_url = reverse_lazy('users:profile')
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -74,4 +73,4 @@ class GeneratePasswordView(PasswordResetView):
                 from_email=EMAIL_HOST_USER,
                 recipient_list=[user.email],
             )
-        return redirect(reverse('users:login'))
+        return redirect(reverse('users:generate-password-done'))
