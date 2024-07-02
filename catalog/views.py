@@ -27,14 +27,14 @@ class CategoryDetailView(DetailView):
         return reverse('catalog:category_one', args=[self.kwargs.get('pk')])
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
 
     def get_success_url(self):
         return reverse('catalog:category_one', args=[self.kwargs.get('pk')])
 
 
-class ProductCreateView(CreateView, LoginRequiredMixin):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:categories_list')
@@ -47,7 +47,7 @@ class ProductCreateView(CreateView, LoginRequiredMixin):
         return super().form_valid(form)
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
 
@@ -75,6 +75,6 @@ class ProductUpdateView(UpdateView):
             return self.render_to_response(self.get_context_data(form=form, formset=formset))
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:categories_list')
