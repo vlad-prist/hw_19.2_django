@@ -7,6 +7,12 @@ NULLABLE = {"blank": True, "null": True}
 
 class Product(models.Model):
 
+    # STATUS_CHOICES = (
+    #     ("new", "Новый"),
+    #     ("in_stock", "В наличии"),
+    #     ("out_of_stock", "Нет в наличии"),
+    # )
+
     name = models.CharField(max_length=100, verbose_name="Наименование")
     description = models.TextField(verbose_name="Описание")
     image = models.ImageField(
@@ -26,6 +32,8 @@ class Product(models.Model):
         auto_now=True, verbose_name="Дата последнего изменения"
     )
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, verbose_name='Владелец', **NULLABLE)
+    is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
+    # is_published = models.CharField(verbose_name="Опубликовано", choices=STATUS_CHOICES)
 
     def __str__(self):
         return f"{self.name}, {self.description}, {self.price}"
@@ -34,6 +42,11 @@ class Product(models.Model):
         verbose_name = "Продукт"
         verbose_name_plural = "Продукты"
         ordering = ["name", "price"]
+        permissions = [
+            ("can_edit_description", "Может менять описание продукта"),
+            ("can_cancel_publishing", "Может отменять публикацию продукта"),
+            ("can_change_category", "Может менять категорию продукта")
+        ]
 
 
 class Category(models.Model):
@@ -47,6 +60,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
+
 
 
 class Version(models.Model):

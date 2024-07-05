@@ -28,7 +28,7 @@
                     <h6 class="text">Цена: {{ category.price }} рублей.</h6>
                     </p>
                     <a class="btn btn-outline-primary" href="{% url 'catalog:products' category.pk %}" role="button">Подробнее</a>
-                    {% if user.is_authenticated %}
+                    {% if perms.catalog.can_edit_description and perms.catalog.can_cancel_publishing and perms.catalog.can_change_category or user == category.owner%}
                     <a class="btn btn-outline-success" href="{% url 'catalog:update' category.pk %}" role="button">Редактировать</a>
                     <a class="btn btn-outline-danger" href="{% url 'catalog:delete' category.pk %}" role="button">Удалить</a>
                     {% endif %}

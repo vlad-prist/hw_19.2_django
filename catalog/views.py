@@ -1,13 +1,14 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, TemplateView, CreateView, UpdateView, DeleteView
 from catalog.models import Category, Product, Version
 from django.urls import reverse_lazy, reverse
-from catalog.forms import ProductForm, VersionForm
+from catalog.forms import ProductForm, VersionForm, ProductModeratorForm
 from django.forms import inlineformset_factory
 
 
-class ContactsTemplateView(TemplateView):
+class ContactsTemplateView(LoginRequiredMixin, TemplateView):
     template_name = 'catalog/contacts.html'
 
     def get_context_data(self, **kwargs):
@@ -16,11 +17,11 @@ class ContactsTemplateView(TemplateView):
         return context
 
 
-class CategoryListView(ListView):
+class CategoryListView(LoginRequiredMixin, ListView):
     model = Category
 
 
-class CategoryDetailView(DetailView):
+class CategoryDetailView(LoginRequiredMixin, DetailView):
     model = Category
 
     def get_success_url(self):
@@ -49,7 +50,7 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
 
 class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
-    form_class = ProductForm
+    #form_class = ProductForm
 
     def get_success_url(self):
         return reverse('catalog:category_one', args=[self.get_object().category.pk]) # kwargs={'pk': self.object.pk}
@@ -73,6 +74,18 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
             return super().form_valid(form)
         else:
             return self.render_to_response(self.get_context_data(form=form, formset=formset))
+
+    def get_form_class(self):
+        permission_required = ['catalog.can_edit_description',
+                               'catalog.can_cancel_publishing',
+                               'catalog.can_change_category',]
+        user = self.request.user
+        if user == self.object.owner:
+            return ProductForm
+        elif [user.has_perm(i for i in permission_required)]:
+        # elif user.has_perm('catalog.can_edit_description') and user.has_perm('catalog.can_cancel_publishing') and user.has_perm('catalog.can_change_category'):
+            return ProductModeratorForm
+        raise PermissionDenied
 
 
 class ProductDeleteView(LoginRequiredMixin, DeleteView):
