@@ -20,9 +20,9 @@ urlpatterns = [
     path("catalog/<int:pk>/", CategoryDetailView.as_view(), name="category_one"),
     path(
         "products/<int:pk>/",
-        cache_page(60)(ProductDetailView.as_view()),
+        cache_page(60 * 60)(ProductDetailView.as_view()),
         name="products",
-    ),
+    ), # Кеширование на 1 час
     path("create/", ProductCreateView.as_view(), name="create"),
     path("update/<int:pk>", ProductUpdateView.as_view(), name="update"),
     path("delete/<int:pk>", ProductDeleteView.as_view(), name="delete"),
