@@ -6,6 +6,7 @@ from catalog.models import Category, Product, Version
 from django.urls import reverse_lazy, reverse
 from catalog.forms import ProductForm, VersionForm, ProductModeratorForm
 from django.forms import inlineformset_factory
+from catalog.services import get_category_list_from_cache
 
 
 class ContactsTemplateView(LoginRequiredMixin, TemplateView):
@@ -19,6 +20,10 @@ class ContactsTemplateView(LoginRequiredMixin, TemplateView):
 
 class CategoryListView(LoginRequiredMixin, ListView):
     model = Category
+    template_name = 'catalog/category_list.html'
+
+    def get_queryset(self):
+        return get_category_list_from_cache()
 
 
 class CategoryDetailView(LoginRequiredMixin, DetailView):
